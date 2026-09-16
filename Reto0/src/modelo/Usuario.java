@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package modelo;
 
 import java.time.LocalDate;
@@ -13,7 +8,7 @@ import java.time.LocalDate;
  */
 public class Usuario {
     
-    private Integer id;
+    private int id;
     private String nombre;
     private String email;
     private String telefono;
@@ -23,7 +18,7 @@ public class Usuario {
      public Usuario() {
     }
 
-    public Usuario(Integer id, String nombre, String email, String telefono,
+    public Usuario(int id, String nombre, String email, String telefono,
                    LocalDate fechaAlta, String ruta) {
         this.id = id;
         this.nombre = nombre;
@@ -33,11 +28,11 @@ public class Usuario {
         this.ruta = ruta;
     }
 
-    public Integer getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(int id) {
         this.id = id;
     }
 

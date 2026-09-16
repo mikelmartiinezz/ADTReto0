@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package modelo;
 
 /**
@@ -10,25 +5,26 @@ package modelo;
  * @author Ike.Bosquez
  */
 public class Desarrollador {
-    private Integer id;
+    private int id;
     private String nombre;
     private String pais;
-    private Integer añoFundacion;
+    private int añoFundacion;
+    
 public Desarrollador() {
     }
 
-    public Desarrollador(Integer id, String nombre, String pais, Integer añoFundacion) {
+    public Desarrollador(int id, String nombre, String pais, int añoFundacion) {
         this.id = id;
         this.nombre = nombre;
         this.pais = pais;
         this.añoFundacion = añoFundacion;
     }
 
-    public Integer getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -48,11 +44,11 @@ public Desarrollador() {
         this.pais = pais;
     }
 
-    public Integer getAnioFundacion() {
+    public int getAñoFundacion() {
         return añoFundacion;
     }
 
-    public void setAnioFundacion(Integer anioFundacion) {
-        this.añoFundacion = anioFundacion;
+    public void setAñoFundacion(int añoFundacion) {
+        this.añoFundacion = añoFundacion;
     }
 }
