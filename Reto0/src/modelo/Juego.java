@@ -1,30 +1,29 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package modelo;
 
-/**
- *
- * @author Ike.Bosquez
- */
-public class Juego {
+import java.io.Serializable;
+
+
+public class Juego implements Serializable {
+
+    private static final long serialVersionUID = 1L;
 
     private int id;
     private String titulo;
     private double precio;
     private int stock;
     private Genero genero;
+    private int idDesarrollador;
 
     public Juego() {
     }
 
-    public Juego(int id, String titulo, double precio, int stock, Genero genero) {
+    public Juego(int id, String titulo, double precio, int stock, Genero genero, int idDesarrollador) {
         this.id = id;
         this.titulo = titulo;
         this.precio = precio;
         this.stock = stock;
         this.genero = genero;
+        this.idDesarrollador = idDesarrollador;
     }
 
     public int getId() {
@@ -65,5 +64,20 @@ public class Juego {
 
     public void setGenero(Genero genero) {
         this.genero = genero;
+    }
+
+    public int getIdDesarrollador() {
+        return idDesarrollador;
+    }
+
+    public void setIdDesarrollador(int idDesarrollador) {
+        this.idDesarrollador = idDesarrollador;
+    }
+
+    @Override
+    public String toString() {
+        return "Juego{id=" + id + ", titulo=" + titulo + ", precio=" + precio
+                + ", stock=" + stock + ", genero=" + genero
+                + ", idDesarrollador=" + idDesarrollador + "}";
     }
 }

@@ -2,20 +2,16 @@ package modelo;
 
 import java.time.LocalDate;
 
-/**
- *
- * @author Ike.Bosquez
- */
 public class Usuario {
-    
+
     private int id;
     private String nombre;
     private String email;
     private String telefono;
     private LocalDate fechaAlta;
-    private String ruta;
-    
-     public Usuario() {
+    private String ruta; // ruta del avatar; solo tienen valor los usuarios precargados
+
+    public Usuario() {
     }
 
     public Usuario(int id, String nombre, String email, String telefono,
@@ -74,5 +70,10 @@ public class Usuario {
 
     public void setRuta(String ruta) {
         this.ruta = ruta;
+    }
+
+    @Override
+    public String toString() {
+        return "Usuario{id=" + id + ", nombre=" + nombre + ", email=" + email + "}";
     }
 }

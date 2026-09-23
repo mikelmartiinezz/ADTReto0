@@ -1,28 +1,24 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package modelo;
 
 import java.time.LocalDate;
 
-/**
- *
- * @author Ike.Bosquez
- */
 public class Compra {
 
     private int id;
     private LocalDate fecha;
     private int cantidad;
+    private int usuarioId;
+    private int juegoId;
 
     public Compra() {
     }
 
-    public Compra(int id, LocalDate fecha, int cantidad) {
+    public Compra(int id, LocalDate fecha, int cantidad, int usuarioId, int juegoId) {
         this.id = id;
         this.fecha = fecha;
         this.cantidad = cantidad;
+        this.usuarioId = usuarioId;
+        this.juegoId = juegoId;
     }
 
     public int getId() {
@@ -47,5 +43,27 @@ public class Compra {
 
     public void setCantidad(int cantidad) {
         this.cantidad = cantidad;
+    }
+
+    public int getUsuarioId() {
+        return usuarioId;
+    }
+
+    public void setUsuarioId(int usuarioId) {
+        this.usuarioId = usuarioId;
+    }
+
+    public int getJuegoId() {
+        return juegoId;
+    }
+
+    public void setJuegoId(int juegoId) {
+        this.juegoId = juegoId;
+    }
+
+    @Override
+    public String toString() {
+        return "Compra{id=" + id + ", fecha=" + fecha + ", cantidad=" + cantidad
+                + ", usuarioId=" + usuarioId + ", juegoId=" + juegoId + "}";
     }
 }

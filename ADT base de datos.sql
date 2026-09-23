@@ -1,4 +1,4 @@
-DROP DATABASE gamedb;		
+DROP DATABASE IF EXISTS gamedb;		
 
 CREATE DATABASE gamedb;
 
