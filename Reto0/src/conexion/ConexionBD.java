@@ -6,17 +6,7 @@ import java.sql.SQLException;
 
 import excepciones.AccesoDatosException;
 
-/**
- * Gestiona la conexión JDBC a gamedb como Singleton: toda la aplicación
- * comparte una única Connection en vez de abrir una nueva cada vez que
- * un DAO necesita hablar con la BD. Esto es lo que pide la rúbrica en
- * IL5.5 para el 10 ("Implementación del patrón de diseño Singleton
- * correcta").
- *
- * CAMBIA usuario/contraseña por los de tu MySQL antes de ejecutar.
- *
- * @author Ike.Bosquez
- */
+
 public class ConexionBD {
 
     private static final String URL =
@@ -27,8 +17,6 @@ public class ConexionBD {
     private static ConexionBD instancia;
     private Connection conexion;
 
-    // Constructor privado: nadie puede hacer "new ConexionBD()" desde fuera,
-    // solo se puede obtener la instancia a través de getInstancia().
     private ConexionBD() throws AccesoDatosException {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");

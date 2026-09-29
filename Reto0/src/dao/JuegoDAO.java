@@ -5,10 +5,6 @@ import java.util.List;
 import excepciones.AccesoDatosException;
 import modelo.Juego;
 
-/**
- * Aísla la capa de negocio de cómo se accede a los datos de Juego
- * (lectura/escritura del fichero juegos.dat).
- */
 public interface JuegoDAO {
 
     void insertar(Juego juego) throws AccesoDatosException;

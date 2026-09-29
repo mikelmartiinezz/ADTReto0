@@ -82,7 +82,4 @@ public class TiendaService {
         return juegoDAO.listarPorDesarrollador(idDesarrollador);
     }
 
-    public List<Compra> verHistorialCompras(int idUsuario) throws AccesoDatosException {
-        return compraDAO.listarPorUsuario(idUsuario);
-    }
 }
