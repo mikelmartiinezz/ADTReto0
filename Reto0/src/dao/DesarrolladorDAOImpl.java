@@ -19,13 +19,13 @@ public class DesarrolladorDAOImpl implements DesarrolladorDAO {
 
     @Override
     public void insertar(Desarrollador desarrollador) throws AccesoDatosException {
-        String sql = "INSERT INTO desarrollador (nombre, pais, añoFundacion) VALUES (?, ?, ?)";
+        String sql = "INSERT INTO desarrollador (nombre, pais, anioFundacion) VALUES (?, ?, ?)";
         Connection con = ConexionBD.getInstancia().getConexion();
 
         try (PreparedStatement ps = con.prepareStatement(sql, PreparedStatement.RETURN_GENERATED_KEYS)) {
             ps.setString(1, desarrollador.getNombre());
             ps.setString(2, desarrollador.getPais());
-            ps.setInt(3, desarrollador.getAñoFundacion());
+            ps.setInt(3, desarrollador.getAnioFundacion());
             ps.executeUpdate();
 
             try (ResultSet rs = ps.getGeneratedKeys()) {
