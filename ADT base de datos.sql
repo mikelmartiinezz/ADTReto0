@@ -17,7 +17,7 @@ CREATE TABLE desarrollador (
     id INT AUTO_INCREMENT PRIMARY KEY,
     nombre VARCHAR(100) NOT NULL,
     pais VARCHAR(100),
-    añoFundacion INT
+    anioFundacion INT
 );
 
 CREATE TABLE compra (
@@ -39,7 +39,7 @@ INSERT INTO usuario (nombre, email, telefono, fechaAlta, ruta) VALUES
 ('Mikel Martín', 'mikel@gmail.com', '633456789', '2026-09-01', 'imagenes/foto4.jpg'),
 ('Ane Rodríguez', 'ane@gmail.com', '644567890', '2026-08-28', 'imagenes/foto5.jpg');
 
-INSERT INTO desarrollador (nombre, pais, añoFundacion) VALUES
+INSERT INTO desarrollador (nombre, pais, anioFundacion) VALUES
 ('Nintendo', 'Japón', 1889),
 ('Electronic Arts', 'Estados Unidos', 1982),
 ('Ubisoft', 'Francia', 1986),
