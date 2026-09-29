@@ -15,6 +15,7 @@ import modelo.Genero;
 import modelo.Juego;
 import modelo.Usuario;
 import util.Util;
+import modelo.Compra;
 
 public class Main {
 
@@ -54,7 +55,7 @@ public class Main {
                         consultarJuegosDesarrollador(servicio);
                         break;
                     case 7:
-                        // TODO (Anurag)
+                        verHistorialCompras(servicio);
                         break;
                     case 0:
                         System.out.println("Saliendo...");
@@ -248,4 +249,34 @@ System.out.println("[" + j.getId() + "] " + j.getTitulo() + " - " + j.getPrecio(
         " - "+ j.getGenero() + " (dev id " + j.getIdDesarrollador() + ")");
         }
     }
+    
+    private static void verHistorialCompras(TiendaService servicio)
+        throws AccesoDatosException {
+
+    int idUsuario = Util.leerInt("ID del usuario: ");
+
+    List<Compra> compras = servicio.verHistorialCompras(idUsuario);
+
+    System.out.println();
+    System.out.println("===== HISTORIAL DE COMPRAS =====");
+
+    if (compras.isEmpty()) {
+
+        System.out.println("El usuario no tiene compras.");
+
+    } else {
+
+        for (Compra compra : compras) {
+
+            System.out.println(
+                    "ID Compra: " + compra.getId()
+                    + " | Fecha: " + compra.getFecha()
+                    + " | Cantidad: " + compra.getCantidad()
+                    + " | Usuario: " + compra.getUsuarioId()
+                    + " | Juego: " + compra.getJuegoId()
+            );
+        }
+    }
+}
+    
 }
