@@ -40,7 +40,7 @@ public class DesarrolladorDAOImpl implements DesarrolladorDAO {
 
     @Override
     public Desarrollador buscarPorId(int id) throws AccesoDatosException {
-        String sql = "SELECT id, nombre, pais, añoFundacion "
+        String sql = "SELECT id, nombre, pais, anioFundacion "
                 + "FROM desarrollador WHERE id = ?";
         try {
             Connection conexion = ConexionBD.getInstancia().getConexion();
@@ -52,7 +52,7 @@ public class DesarrolladorDAOImpl implements DesarrolladorDAO {
                                 rs.getInt("id"),
                                 rs.getString("nombre"),
                                 rs.getString("pais"),
-                                rs.getInt("añoFundacion")
+                                rs.getInt("anioFundacion")
                         );
                     }
                 }
