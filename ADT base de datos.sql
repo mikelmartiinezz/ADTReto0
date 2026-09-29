@@ -33,11 +33,11 @@ CREATE TABLE compra (
 );
 
 INSERT INTO usuario (nombre, email, telefono, fechaAlta, ruta) VALUES
-('Iker Bosquez', 'iker@gmail.com', '600123456', '2026-09-15', '/usuarios/iker'),
-('Carlos García', 'carlos@gmail.com', '611234567', '2026-09-10', '/usuarios/carlos'),
-('Laura López', 'laura@gmail.com', '622345678', '2026-09-05', '/usuarios/laura'),
-('Mikel Martín', 'mikel@gmail.com', '633456789', '2026-09-01', '/usuarios/mikel'),
-('Ane Rodríguez', 'ane@gmail.com', '644567890', '2026-08-28', '/usuarios/ane');
+('Iker Bosquez', 'iker@gmail.com', '600123456', '2026-09-15', 'imagenes/foto1.jpg'),
+('Carlos García', 'carlos@gmail.com', '611234567', '2026-09-10', 'imagenes/foto2.jpg'),
+('Laura López', 'laura@gmail.com', '622345678', '2026-09-05', 'imagenes/foto3.jpg'),
+('Mikel Martín', 'mikel@gmail.com', '633456789', '2026-09-01', 'imagenes/foto4.jpg'),
+('Ane Rodríguez', 'ane@gmail.com', '644567890', '2026-08-28', 'imagenes/foto5.jpg');
 
 INSERT INTO desarrollador (nombre, pais, añoFundacion) VALUES
 ('Nintendo', 'Japón', 1889),
