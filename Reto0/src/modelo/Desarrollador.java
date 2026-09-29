@@ -6,16 +6,16 @@ public class Desarrollador {
     private int id;
     private String nombre;
     private String pais;
-    private int añoFundacion;
+    private int anioFundacion;
 
     public Desarrollador() {
     }
 
-    public Desarrollador(int id, String nombre, String pais, int añoFundacion) {
+    public Desarrollador(int id, String nombre, String pais, int anioFundacion) {
         this.id = id;
         this.nombre = nombre;
         this.pais = pais;
-        this.añoFundacion = añoFundacion;
+        this.anioFundacion = anioFundacion;
     }
 
     public int getId() {
@@ -42,12 +42,12 @@ public class Desarrollador {
         this.pais = pais;
     }
 
-    public int getAñoFundacion() {
-        return añoFundacion;
+    public int getAnioFundacion() {
+        return anioFundacion;
     }
 
-    public void setAñoFundacion(int añoFundacion) {
-        this.añoFundacion = añoFundacion;
+    public void setAnioFundacion(int anioFundacion) {
+        this.anioFundacion = anioFundacion;
     }
 
     @Override
