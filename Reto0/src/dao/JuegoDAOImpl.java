@@ -9,6 +9,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import excepciones.AccesoDatosException;
+import java.io.FileOutputStream;
+import java.io.ObjectOutputStream;
 import modelo.Juego;
 
 public class JuegoDAOImpl implements JuegoDAO {
@@ -17,17 +19,44 @@ public class JuegoDAOImpl implements JuegoDAO {
 
     @Override
     public void insertar(Juego juego) throws AccesoDatosException {
-        // TODO (Iker)
+        List<Juego> juegos = leerTodos();
+        for (Juego j : juegos) {
+            if (j.getId() == juego.getId()) {
+                throw new AccesoDatosException(
+                        "Ya existe un juego con ese ID."
+                );
+            }
+        }
+        juegos.add(juego);
+        guardarTodos(juegos);
     }
 
     @Override
-    public void actualizar(Juego juego) throws AccesoDatosException {
-        // TODO (Iker)
+    public void actualizar(Juego juegoActualizado) throws AccesoDatosException {
+        List<Juego> juegos = leerTodos();
+        boolean encontrado = false;
+        for (int i = 0; i < juegos.size(); i++) {
+            if (juegos.get(i).getId() == juegoActualizado.getId()) {
+
+                juegos.set(i, juegoActualizado);
+                encontrado = true;
+                break;
+            }
+        }
+        if (!encontrado) {
+            throw new AccesoDatosException("El juego no existe.");
+        }
+        guardarTodos(juegos);
     }
 
     @Override
     public Juego buscarPorId(int id) throws AccesoDatosException {
-        // TODO (Iker)
+        List<Juego> juegos = leerTodos();
+        for (Juego juego : juegos) {
+            if (juego.getId() == id) {
+                return juego;
+            }
+        }
         return null;
     }
 
@@ -65,6 +94,23 @@ public class JuegoDAOImpl implements JuegoDAO {
             return new ArrayList<>();
         } catch (IOException | ClassNotFoundException e) {
             throw new AccesoDatosException("Error al leer el fichero " + RUTA_FICHERO, e);
+        }
+    }
+
+    private void guardarTodos(List<Juego> juegos)
+            throws AccesoDatosException {
+
+        try (ObjectOutputStream oos
+                = new ObjectOutputStream(
+                        new FileOutputStream(RUTA_FICHERO))) {
+
+            oos.writeObject(juegos);
+
+        } catch (IOException e) {
+
+            throw new AccesoDatosException(
+                    "Error al guardar el fichero " + RUTA_FICHERO, e
+            );
         }
     }
 }

@@ -3,20 +3,16 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/mikel/2DAM/ADT/RETO0/ADTReto0/Reto0/src/modelo/Compra.java</file>
-            <file>file:/C:/Users/mikel/2DAM/ADT/RETO0/ADTReto0/Reto0/src/modelo/Desarrollador.java</file>
-            <file>file:/C:/Users/mikel/2DAM/ADT/RETO0/ADTReto0/Reto0/src/modelo/Genero.java</file>
-            <file>file:/C:/Users/mikel/2DAM/ADT/RETO0/ADTReto0/Reto0/src/modelo/Juego.java</file>
-            <file>file:/C:/Users/mikel/2DAM/ADT/RETO0/ADTReto0/Reto0/src/modelo/Usuario.java</file>
-            <file>file:/C:/Users/mikel/2DAM/ADT/RETO0/ADTReto0/Reto0/src/util/Util.java</file>
-            <file>file:/C:/Users/mikel/2DAM/ADT/RETO0/ADTReto0/Reto0/src/controlador/TiendaService.java</file>
-            <file>file:/C:/Users/mikel/2DAM/ADT/RETO0/ADTReto0/Reto0/src/vista/Main.java</file>
-            <file>file:/C:/Users/mikel/2DAM/ADT/RETO0/ADTReto0/Reto0/src/excepciones/DatosAccesoException.java</file>
-            <file>file:/C:/Users/mikel/2DAM/ADT/RETO0/ADTReto0/Reto0/src/dao/JuegoDAO.java</file>
-            <file>file:/C:/Users/mikel/2DAM/ADT/RETO0/ADTReto0/Reto0/src/dao/UsuarioDAO.java</file>
-            <file>file:/C:/Users/mikel/2DAM/ADT/RETO0/ADTReto0/Reto0/src/dao/DesarrolladorDAO.java</file>
-            <file>file:/C:/Users/mikel/2DAM/ADT/RETO0/ADTReto0/Reto0/src/dao/CompraDAO.java</file>
-            <file>file:/C:/Users/mikel/2DAM/ADT/RETO0/ADTReto0/Reto0/src/dao/DesarrolladorDAOImpl.java</file>
+            <file>file:/C:/Users/Ike.Bosquez/Desktop/ADTReto0-mikel/ADTReto0-mikel/Reto0/src/dao/CompraDAOImpl.java</file>
+            <file>file:/C:/Users/Ike.Bosquez/Desktop/ADTReto0-mikel/ADTReto0-mikel/Reto0/src/dao/DesarrolladorDAO.java</file>
+            <file>file:/C:/Users/Ike.Bosquez/Desktop/ADTReto0-mikel/ADTReto0-mikel/Reto0/src/dao/DesarrolladorDAOImpl.java</file>
+            <file>file:/C:/Users/Ike.Bosquez/Desktop/ADTReto0-mikel/ADTReto0-mikel/Reto0/src/dao/JuegoDAO.java</file>
+            <file>file:/C:/Users/Ike.Bosquez/Desktop/ADTReto0-mikel/ADTReto0-mikel/Reto0/src/dao/JuegoDAOImpl.java</file>
+            <file>file:/C:/Users/Ike.Bosquez/Desktop/ADTReto0-mikel/ADTReto0-mikel/Reto0/src/modelo/Juego.java</file>
+            <file>file:/C:/Users/Ike.Bosquez/Desktop/ADTReto0-mikel/ADTReto0-mikel/Reto0/src/dao/UsuarioDAO.java</file>
+            <file>file:/C:/Users/Ike.Bosquez/Desktop/ADTReto0-mikel/ADTReto0-mikel/Reto0/src/dao/UsuarioDAOImpl.java</file>
+            <file>file:/C:/Users/Ike.Bosquez/Desktop/ADTReto0-mikel/ADTReto0-mikel/Reto0/src/vista/Main.java</file>
+            <file>file:/C:/Users/Ike.Bosquez/Desktop/ADTReto0-mikel/ADTReto0-mikel/Reto0/src/modelo/Compra.java</file>
         </group>
     </open-files>
 </project-private>
