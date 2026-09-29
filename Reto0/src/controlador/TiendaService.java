@@ -12,14 +12,16 @@ import dao.JuegoDAOImpl;
 import dao.UsuarioDAO;
 import dao.UsuarioDAOImpl;
 import excepciones.AccesoDatosException;
+import excepciones.EmailInvalidoException;
+import excepciones.TelefonoInvalidoException;
 import modelo.Compra;
 import modelo.Desarrollador;
 import modelo.Juego;
 import modelo.Usuario;
 
 /**
- * Capa de lógica de negocio. La capa de IU solo habla con esta clase,
- * nunca con los DAO directamente.
+ * Capa de lógica de negocio. La capa de IU solo habla con esta clase, nunca con
+ * los DAO directamente.
  */
 public class TiendaService {
 
@@ -35,7 +37,15 @@ public class TiendaService {
         this.compraDAO = new CompraDAOImpl();
     }
 
-    public void registrarUsuario(Usuario usuario) throws AccesoDatosException {
+    public void registrarUsuario(Usuario usuario) throws AccesoDatosException, EmailInvalidoException, TelefonoInvalidoException {
+        String email = usuario.getEmail();
+        if (email == null || !email.matches("^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$")) {
+            throw new EmailInvalidoException("El email no es válido. Debe tener un formato como usuario@dominio.com.");
+        }
+        String telefono = usuario.getTelefono();
+        if (telefono == null || !telefono.matches("\\d{9}")) {
+            throw new TelefonoInvalidoException("El teléfono no es válido. Debe tener exactamente 9 dígitos.");
+        }
         usuarioDAO.insertar(usuario);
     }
 
@@ -82,4 +92,13 @@ public class TiendaService {
         return juegoDAO.listarPorDesarrollador(idDesarrollador);
     }
 
+    public List<Compra> verHistorialCompras(int idUsuario)
+            throws AccesoDatosException {
+
+        return compraDAO.listarPorUsuario(idUsuario);
+    }
+
+    public Usuario buscarUsuario(int id) throws AccesoDatosException {
+        return usuarioDAO.buscarPorId(id);
+    }
 }
